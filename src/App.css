@@ -1,0 +1,255 @@
+/* App.css */
+.app-container {
+  display: flex;
+  height: 100vh;
+  background-color: #1e2327;
+  color: #fff;
+  width: 100%;
+}
+
+
+.editor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+ 
+}
+
+
+
+.markdown-preview {
+  width: 100%;
+  padding: 20px;
+  border-radius: 5px;
+  background-color: #1e2327;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+.editor-actions {
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+}
+
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.no-note {
+  font-size: 18px;
+  color: #777;
+}
+
+
+/* Sidebar.css */
+
+.sidebar {
+  width: 15%;
+  background-color: #1e2327;
+  padding: 5px;
+  color: #fff;
+  height: 100vh;
+  overflow-y: auto;
+  border-right: 0.5px solid rgb(75, 75, 75);
+}
+
+
+.sidebar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 20px;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.new-note-btn {
+
+  background-color: transparent;
+ 
+  width: 25px;
+  border: none;
+
+  cursor: pointer;
+}
+
+
+.search-input {
+  padding: 10px;
+ 
+  width: 80%;
+  background-color: transparent;
+  border: none ;
+  font-size: 16px;
+  
+}
+.search-input::placeholder{
+  color: #aba9a9;
+  font-size: 15px;
+}
+.search-input:focus{
+  border: none !;
+outline: none;
+}
+
+/* Notes List */
+.notes-list {
+  max-height: calc(100vh - 100px);
+  overflow-y: auto;
+}
+
+.note-item {
+  padding: 10px;
+  cursor: pointer;
+  border-bottom: 1px solid #444;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.note-item:hover {
+  background-color: #333;
+}
+
+/* Pin State Styling */
+.note-item.pinned {
+  background-color: #2b2b2b; 
+  border-left: 5px solid #ffd700; 
+}
+
+.note-item .note-text {
+  flex-grow: 1;
+}
+
+.pin-btn {
+  padding: 5px 10px;
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.pin-btn:hover {
+  background-color: #434343;
+}
+
+.no-notes {
+  color: #777;
+  font-size: 18px;
+  text-align: center !;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+/* Editor.css */
+.editor {
+  flex: 1;
+  padding: 20px;
+  background-color: #1e2327;
+}
+
+textarea {
+  width: 100%;
+  height: calc(100vh - 100px);
+  background-color: #1e2327;
+  color: #fff;
+  border: none ;
+  padding: 10px;
+  font-size: 16px;
+}
+textarea:focus {
+  outline: none; 
+  border: none;  
+}
+
+
+.editor-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+button {
+  padding: 10px 20px;
+  cursor: pointer;
+}
+ 
+.editor-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 80%;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1e2327;
+  padding: 8px;
+  color: white;
+  font-size: 18px;
+  width: 100%;
+  border-bottom: 1px solid rgb(75, 74, 74);
+}
+
+.navbar-title {
+  font-weight: bold;
+}
+
+.navbar-actions {
+  position: relative;
+}
+
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-btn {
+
+  width:30px;
+}
+
+.dropdown-btn:hover {
+  background-color: #0056b3;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  right: 0;
+  background-color: #333;
+  min-width: 150px;
+  z-index: 1;
+  border-radius: 5px;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content button {
+  width: 100%;
+  padding: 10px;
+  background-color: #333;
+  color: white;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+}
+
+.dropdown-content button:hover {
+  background-color: #555;
+}
+
+
+
+
