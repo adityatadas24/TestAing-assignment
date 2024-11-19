@@ -98,7 +98,7 @@ const App = () => {
 
   return (
     <div className="app-container">
-      {isLoggidIn ? ( <div>
+      {!isLoggidIn ? ( <div>
         <Sidebar
         notes={notes}
         onSelectNote={(note) => setSelectedNote(note)}
