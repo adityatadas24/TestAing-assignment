@@ -8,16 +8,11 @@ const Navbar = ({ onSave, onDelete, onToggleMarkdown, onCopyLink, isMarkdown }) 
     <div className="navbar">
       <div className="navbar-title"></div>
       <div className="navbar-actions">
-        <div className="dropdown">
-          <img className="dropdown-btn" src={action} alt="" />
-          <div className="dropdown-content">
-            <button onClick={onSave}>Save</button>
-            <button onClick={onDelete}>Delete</button>
-            <button onClick={onToggleMarkdown}>
-              {isMarkdown ? "Edit" : "Markdown"}
-            </button>
-            <button onClick={onCopyLink}>Copy Link</button>
-          </div>
+        <div className="dropdown" style={{gap:'20px',marginTop:'30px'}}>
+        <button style={{marginRight:'10px'}} onClick={onDelete}>Cancle</button>
+
+            <button  onClick={onSave}>Save</button>
+         
         </div>
       </div>
     </div>

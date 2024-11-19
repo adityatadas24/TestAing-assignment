@@ -7,7 +7,7 @@ import addnote from "../components/assets/addnotes.png";
 const Sidebar = ({ notes, onSelectNote, onAddNote, onTogglePin }) => {
   const [searchQuery, setSearchQuery] = useState("");
 
-  // Filter notes based on the search
+ 
   const filteredNotes = notes.filter((note) =>
     note.content.toLowerCase().includes(searchQuery.toLowerCase())
   );
@@ -31,6 +31,7 @@ const Sidebar = ({ notes, onSelectNote, onAddNote, onTogglePin }) => {
             src={addnote}
             alt=""
           />
+          
         </div>
 
         <input

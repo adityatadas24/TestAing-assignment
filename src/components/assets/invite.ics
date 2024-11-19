@@ -1,0 +1,49 @@
+BEGIN:VCALENDAR
+PRODID:-//Google Inc//Google Calendar 70.9054//EN
+VERSION:2.0
+CALSCALE:GREGORIAN
+METHOD:REQUEST
+BEGIN:VTIMEZONE
+TZID:Asia/Kolkata
+X-LIC-LOCATION:Asia/Kolkata
+BEGIN:STANDARD
+TZOFFSETFROM:+0530
+TZOFFSETTO:+0530
+TZNAME:GMT+5:30
+DTSTART:19700101T000000
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+DTSTART;TZID=Asia/Kolkata:20241121T233000
+DTEND;TZID=Asia/Kolkata:20241122T003000
+DTSTAMP:20241118T144642Z
+ORGANIZER;CN=Abhijeet Goel:mailto:abhijeet.goel@testaing.com
+UID:36pg3q598312gikkvog92r5uvk@google.com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;RSVP=
+ TRUE;CN=adityatadas2000@gmail.com;X-NUM-GUESTS=0:mailto:adityatadas2000@gma
+ il.com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=ACCEPTED;RSVP=TRUE
+ ;CN=Abhijeet Goel;X-NUM-GUESTS=0:mailto:abhijeet.goel@testaing.com
+X-GOOGLE-CONFERENCE:https://meet.google.com/gmd-oowm-jrr
+X-MICROSOFT-CDO-OWNERAPPTID:-1708655032
+CREATED:20241118T144639Z
+DESCRIPTION:Event Name: One-One Call\n\nLocation: This is a Google Meet web
+  conference.\nYou can join this meeting from your computer\, tablet\, or sm
+ artphone.\nhttps://calendly.com/events/07d21ef2-56fa-40c2-9a2b-e9164d4e063d
+ /google_meet\n\nNeed to make changes to this event?\nCancel: https://calend
+ ly.com/cancellations/efd227a0-ca15-4ff9-80e9-5164a567094c\nReschedule: http
+ s://calendly.com/reschedulings/efd227a0-ca15-4ff9-80e9-5164a567094c\n\nPowe
+ red by Calendly.com\n\n\n-::~:~::~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:
+ ~:~:~:~:~:~:~:~:~:~:~:~:~:~:~::~:~::-\nJoin with Google Meet: https://meet.
+ google.com/gmd-oowm-jrr\nOr dial: (US) +1 631-602-0342 PIN: 151681782#\n\nL
+ earn more about Meet at: https://support.google.com/a/users/answer/9282720\
+ n\nPlease do not edit this section.\n-::~:~::~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:
+ ~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~::~:~::-
+LAST-MODIFIED:20241118T144639Z
+LOCATION:Google Meet (instructions in description)
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Aditya Tadas and Abhijeet Goel
+TRANSP:OPAQUE
+END:VEVENT
+END:VCALENDAR

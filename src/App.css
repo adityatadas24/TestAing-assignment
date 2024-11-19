@@ -189,14 +189,15 @@ button {
 
 .navbar {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   background-color: #1e2327;
   padding: 8px;
   color: white;
   font-size: 18px;
   width: 100%;
-  border-bottom: 1px solid rgb(75, 74, 74);
+  /* border-bottom: 1px solid rgb(75, 74, 74); */
+  margin-bottom: '20px';
 }
 
 .navbar-title {
