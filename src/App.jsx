@@ -1,16 +1,38 @@
 import React, { useEffect, useState } from "react";
 import { db } from "./Firebase";
-import { collection, addDoc, updateDoc, deleteDoc, onSnapshot, doc } from "firebase/firestore";
+import {auth} from './Firebase'
+import {
+  collection,
+  addDoc,
+  updateDoc,
+  deleteDoc,
+  onSnapshot,
+  doc,
+} from "firebase/firestore";
 import Sidebar from "./components/Sidebar";
 import Editor from "./components/Editor";
 import "./App.css";
+import Login from "./components/Login";
+import { onAuthStateChanged } from "firebase/auth";
 
 const App = () => {
   const [notes, setNotes] = useState([]);
   const [selectedNote, setSelectedNote] = useState(null);
-
+  const [isLoggidIn, setIsLogginedIn] = useState(false);
   // Fetch notes
+
+
+  useEffect(()=>{
+    const unsubscribe = onAuthStateChanged(auth, (user)=>{
+      setIsLogginedIn(!user)
+
+    })
+    return ()=>unsubscribe()
+  },[])
+
+
   useEffect(() => {
+    if(!isLoggidIn) return;
     const notesCollectionRef = collection(db, "notes");
     const unsubscribe = onSnapshot(notesCollectionRef, (snapshot) => {
       const notesData = snapshot.docs.map((doc) => ({
@@ -21,7 +43,7 @@ const App = () => {
     });
 
     return () => unsubscribe();
-  }, []);
+  }, [isLoggidIn]);
 
   // Add a new note
   const addNewNote = async () => {
@@ -64,7 +86,11 @@ const App = () => {
     const note = notes.find((note) => note.id === id);
     try {
       await updateDoc(noteRef, { pinned: !note.pinned });
-      setNotes(notes.map((note) => (note.id === id ? { ...note, pinned: !note.pinned } : note)));
+      setNotes(
+        notes.map((note) =>
+          note.id === id ? { ...note, pinned: !note.pinned } : note
+        )
+      );
     } catch (error) {
       console.error("Error updating pinned status: ", error);
     }
@@ -72,7 +98,8 @@ const App = () => {
 
   return (
     <div className="app-container">
-      <Sidebar
+      {!isLoggidIn ? ( <div>
+        <Sidebar
         notes={notes}
         onSelectNote={(note) => setSelectedNote(note)}
         onAddNote={addNewNote}
@@ -83,6 +110,10 @@ const App = () => {
         onUpdateNote={updateNote}
         onDeleteNote={deleteNote}
       />
+      </div>):(
+       <Login onLogin={setIsLogginedIn}/>
+      )}
+    
     </div>
   );
 };

@@ -49,10 +49,10 @@ const Sidebar = ({ notes, onSelectNote, onAddNote, onTogglePin }) => {
           filteredNotes.map((note) => (
             <div
               key={note.id}
-              className={`note-item ${note.pinned ? "pinned" : ""}`}
+              className={`note-item ${note ? "pinned" : ""}`}
               onClick={() => onSelectNote(note)}
             >
-              <div className="note-item-content">
+              <div className="note-item-content" >
                 <p className="note-text">
                   {note.content.substring(0, 30) || "New Note..."}
                 </p>
