@@ -11,7 +11,7 @@ const Navbar = ({ onSave, onDelete, onToggleMarkdown, onCopyLink, isMarkdown }) 
         <div className="dropdown" style={{gap:'20px',marginTop:'30px'}}>
         <button style={{marginRight:'10px'}} onClick={onDelete}>Cancle</button>
 
-            <button  onClick={onSave}>Save</button>
+            <button  onClick={onSave}>Saves</button>
          
         </div>
       </div>
